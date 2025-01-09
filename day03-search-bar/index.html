@@ -16,6 +16,29 @@
     <title>Day 3. Search Bar</title>
   </head>
   <body>
+    <main>
+      <form
+        class="search"
+        target="_blank"
+        action="https://search.naver.com/search.naver"
+      >
+        <input
+          class="search__input"
+          id="query"
+          type="text"
+          placeholder="검색하기..."
+          name="query"
+        />
+        <label class="search__label" for="query">
+          <span class="material-symbols-outlined"> search </span>
+        </label>
+        <button class="search__button" type="submit">검색</button>
+      </form>
+      <div class="search-render">
+        "<strong id="keyword"></strong>" 검색 중...
+      </div>
+    </main>
+
     <script src="main.js"></script>
   </body>
 </html>
