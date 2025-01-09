@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+button {
+  font-family: "Elice DX Neolli", sans-serif;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 3rem 0;
+}
+
+.accordion__title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+hr {
+  margin: 1rem 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+.accordion__list {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+
+  overflow: hidden;
+}
+
+.accordion__list-item {
+  overflow-y: hidden;
+  max-height: 5rem;
+  width: 40rem;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion__checkbox {
+  display: none;
+}
+
+.accordion__list-item:has(.accordion__checkbox:checked) {
+  max-height: 80rem;
+}
+
+.accordion__label {
+  display: block;
+  padding: 1.2rem 1.2rem 1.2rem 3rem;
+
+  position: relative;
+}
+
+.accordion__label > h3 {
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.accordion__label > span {
+  font-size: 12px;
+  font-weight: 200;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.accordion__label:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.accordion__label::before {
+  content: ">";
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+
+.accordion__checkbox:checked ~ .accordion__label::before {
+  content: "v";
+}
+
+.accordion__content {
+  padding: 1.2rem 3rem;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 1.5;
+}
