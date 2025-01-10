@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+button,
+input,
+textarea {
+  font-family: "Elice DX Neolli", sans-serif;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.kanban {
+  width: 80rem;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.01);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.board {
+  position: relative;
+
+  overflow: hidden;
+  z-index: 1;
+
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.05) inset;
+}
+
+.board__inner {
+  height: 70vh;
+  padding: 5rem 1.5rem 1.5rem 1.5rem;
+
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+}
+
+.board__inner::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+.board__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+
+  width: 100%;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+
+  background: linear-gradient(
+    180deg,
+    rgba(244, 244, 244, 1) 0%,
+    rgba(244, 244, 244, 0.5438769257703081) 81%,
+    rgba(244, 244, 244, 0) 100%
+  );
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.board__add-button {
+  padding: 0.1rem 0.8rem;
+
+  font-size: 1.2rem;
+  font-weight: 200;
+
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+.board__add-button:hover {
+  background-color: rgb(37, 37, 37);
+  color: white;
+}
+
+.board__title {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.board__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.board__card {
+  width: 100%;
+  padding: 1.4rem 1rem;
+
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  position: relative;
+}
+
+.board__card:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.board__card h4,
+.board__card input {
+  font-size: 1.3rem;
+}
+
+.board__card input {
+  width: 100%;
+  padding: 0.5rem;
+
+  background-color: rgba(255, 255, 255, 0.5);
+
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.2rem;
+
+  font-weight: 200;
+
+  outline: none;
+}
+
+.board__card input:focus {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.board__card hr {
+  margin: 0.6rem 0;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.board__card p,
+.board__card textarea {
+  font-size: 0.7rem;
+  font-weight: 200;
+  line-height: 1.2;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.board__card textarea {
+  max-width: 100%;
+  min-width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  background-color: rgba(255, 255, 255, 0.5);
+
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.2rem;
+
+  font-weight: 200;
+
+  outline: none;
+}
+
+.board__card textarea:focus {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.board__card button {
+  padding: 0.5rem 0.8rem;
+  width: 100%;
+
+  font-size: 1rem;
+  font-weight: 200;
+
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+.board__card button:hover {
+  background-color: rgb(37, 37, 37);
+  color: white;
+}
+
+.board__card > .board__next-button {
+  width: max-content;
+  display: none;
+
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  font-size: 0.8rem;
+}
+
+.board__card:hover > .board__next-button {
+  display: block;
+}

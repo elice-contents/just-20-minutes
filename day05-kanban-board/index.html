@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://font.elice.io/css?family=Elice+DX+Neolli"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Day 5. Kanban Board</title>
+  </head>
+  <body>
+    <main>
+      <h1>Kanban Board</h1>
+
+      <div class="kanban">
+        <section class="board">
+          <div class="board__inner">
+            <div class="board__header">
+              <h3 class="board__title">TODO</h3>
+              <button class="board__add-button" id="add-todo">+</button>
+            </div>
+            <ul class="board__list" id="todo"></ul>
+          </div>
+        </section>
+        <section class="board">
+          <div class="board__inner">
+            <div class="board__header">
+              <h3 class="board__title">IN PROGRESS</h3>
+            </div>
+            <ul class="board__list" id="inProgress"></ul>
+          </div>
+        </section>
+        <section class="board">
+          <div class="board__inner">
+            <div class="board__header">
+              <h3 class="board__title">DONE</h3>
+            </div>
+            <ul class="board__list" id="done"></ul>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
