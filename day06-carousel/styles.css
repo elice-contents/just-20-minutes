@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+button {
+  font-family: "Elice DX Neolli", sans-serif;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  width: max-content;
+
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.carousel__container {
+  position: relative;
+  width: 1024px;
+  height: 500px;
+
+  overflow: hidden;
+
+  border-radius: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.carousel__images {
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  left: -1024px;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.carousel__buttons {
+  padding: 0.5rem;
+
+  display: flex;
+  gap: 1rem;
+
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+  border-radius: 2rem;
+}
+
+.carousel__button {
+  width: 2rem;
+  height: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+
+  font-size: 2rem;
+  font-weight: 200;
+  color: rgba(0, 0, 0, 0.5);
+
+  cursor: pointer;
+}
+
+.carousel__button:hover {
+  color: rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://font.elice.io/css?family=Elice+DX+Neolli"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Day 6. Carousel</title>
+  </head>
+  <body>
+    <main>
+      <div class="carousel">
+        <div class="carousel__container">
+          <ul id="carousel-images" class="carousel__images">
+            <li class="carousel__image">
+              <img src="assets/image5.jpg" alt="image5" />
+            </li>
+            <li class="carousel__image">
+              <img src="assets/image1.jpg" alt="image1" />
+            </li>
+            <li class="carousel__image">
+              <img src="assets/image2.jpg" alt="image2" />
+            </li>
+            <li class="carousel__image">
+              <img src="assets/image3.jpg" alt="image3" />
+            </li>
+            <li class="carousel__image">
+              <img src="assets/image4.jpg" alt="image4" />
+            </li>
+            <li class="carousel__image">
+              <img src="assets/image5.jpg" alt="image5" />
+            </li>
+          </ul>
+        </div>
+        <ul class="carousel__buttons">
+          <li>
+            <button id="carousel-button-prev" class="carousel__button">
+              &lt;
+            </button>
+          </li>
+          <li>
+            <button id="carousel-button-next" class="carousel__button">
+              &gt;
+            </button>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
