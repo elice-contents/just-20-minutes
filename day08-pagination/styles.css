@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+button {
+  font-family: "Elice DX Neolli", sans-serif;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-container {
+  width: 40rem;
+}
+
+.data-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.data-list li {
+  margin: 0.5rem 0;
+  padding: 1rem;
+
+  background: #f9f9f9;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.data-list li > h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.data-list li > p {
+  font-weight: 200;
+}
+
+.pagination {
+  margin-top: 1rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.3rem;
+
+  background: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease-in-out;
+}
+
+.pagination button:hover {
+  background-color: rgba(115, 83, 234, 0.1);
+}
+
+.pagination button.active {
+  background-color: rgba(115, 83, 234, 0.8);
+  color: #fff;
+}
