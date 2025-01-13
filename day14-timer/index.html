@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://font.elice.io/css?family=Elice+DX+Neolli"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Day 14. Timer</title>
+  </head>
+  <body>
+    <main>
+      <div class="timer-container">
+        <div class="timer-display">
+          <svg class="timer-circle" width="250" height="250">
+            <circle cx="125" cy="125" r="100" class="circle-bg" />
+            <circle cx="125" cy="125" r="100" class="circle-progress" />
+          </svg>
+          <span id="timer-time" class="timer-time">00:00:00</span>
+        </div>
+        <div class="timer-controls">
+          <button id="start-button" class="control-button">시작</button>
+          <button id="pause-button" class="control-button">일시정지</button>
+          <button id="reset-button" class="control-button">초기화</button>
+        </div>
+        <div class="timer-settings">
+          <label for="set-minutes">설정 (분):</label>
+          <input id="set-minutes" type="number" min="0" max="60" value="1" />
+          <button id="set-timer-button" class="control-button">설정</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+button,
+input {
+  font-family: "Elice DX Neolli", sans-serif;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.timer-display {
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+
+.timer-circle {
+  transform: rotate(-90deg);
+}
+
+.circle-bg {
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.1);
+  stroke-width: 5;
+}
+
+.circle-progress {
+  fill: none;
+  stroke: rgba(115, 83, 234, 1);
+  stroke-width: 5;
+  stroke-dasharray: 628.318530718; /* 2 * Math.PI * 100 */
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.5s ease-in-out, stroke 0.2s ease-in-out;
+}
+
+.circle-progress.paused {
+  stroke: rgb(234, 83, 106);
+}
+
+.timer-time {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 1.8rem;
+  font-weight: 200;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.timer-controls,
+.timer-settings {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.control-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+
+  background-color: rgba(115, 83, 234, 1);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+.control-button:hover {
+  background-color: rgba(90, 60, 200, 1);
+}
+
+input[type="number"] {
+  width: 4rem;
+  padding: 0.5rem;
+  text-align: center;
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+
+  font-size: 1rem;
+}
