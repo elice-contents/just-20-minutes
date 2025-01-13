@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://font.elice.io/css?family=Elice+DX+Neolli"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Day 12. Review</title>
+  </head>
+  <body>
+    <main>
+      <form id="review-form" class="review-container">
+        <div class="review-stars">
+          <p>별점</p>
+          <div id="star-rating" class="star-rating">
+            <span class="material-icons star"> star </span>
+            <span class="material-icons star"> star </span>
+            <span class="material-icons star"> star </span>
+            <span class="material-icons star"> star </span>
+            <span class="material-icons star"> star </span>
+          </div>
+          <span id="rating-value" class="rating-value">5점</span>
+        </div>
+        <div class="review-keywords">
+          <p>감상 키워드 (최대 3개)</p>
+          <div id="keywords" class="keyword-list">
+            <button type="button" class="keyword">재밌어요</button>
+            <button type="button" class="keyword">감동적이에요</button>
+            <button type="button" class="keyword">지루해요</button>
+            <button type="button" class="keyword">스릴 넘쳐요</button>
+            <button type="button" class="keyword">연출이 좋아요</button>
+            <button type="button" class="keyword">음악이 훌륭해요</button>
+            <button type="button" class="keyword">배우가 멋져요</button>
+            <button type="button" class="keyword">스토리가 좋아요</button>
+          </div>
+        </div>
+        <div class="review-content">
+          <p>리뷰 내용 (500자 이내)</p>
+          <textarea
+            id="review-text"
+            maxlength="500"
+            placeholder="리뷰를 작성해주세요"
+          ></textarea>
+        </div>
+        <button type="submit" class="submit-button">리뷰 제출</button>
+      </form>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
