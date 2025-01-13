@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+button {
+  font-family: "Elice DX Neolli", sans-serif;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-upload {
+  width: 50rem;
+}
+
+.file-upload__drop-area {
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+
+  border: 2px dashed rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+
+  background-color: rgba(0, 0, 0, 0.02);
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.file-upload__drop-area:hover {
+  border-color: rgba(115, 83, 234, 1);
+}
+
+.file-upload__drop-area.dragover {
+  background-color: rgba(115, 83, 234, 0.1);
+  border-color: rgba(115, 83, 234, 1);
+}
+
+.file-upload__drop-area.error {
+  background-color: rgba(255, 0, 0, 0.1);
+  border-color: rgba(255, 0, 0, 0.8);
+}
+
+.file-upload__drop-area > span {
+  font-size: 5rem;
+
+  margin-bottom: 0.5rem;
+}
+
+.file-upload__drop-area > p {
+  font-size: 1.5rem;
+  font-weight: 200;
+
+  margin-bottom: 1rem;
+}
+
+.file-upload__drop-area > input[type="file"] {
+  display: none;
+}
+
+.file-upload__drop-area > label {
+  color: blue;
+}
+
+.file-upload__drop-area > label:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.file-upload__preview {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.file-upload__image {
+  width: 150px;
+  height: 150px;
+
+  display: inline-block;
+  overflow: hidden;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.file-upload__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
