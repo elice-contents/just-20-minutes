@@ -1,0 +1,102 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+button {
+  font-family: "Elice DX Neolli", sans-serif;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-input-container {
+  width: 40rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  padding: 1rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.email-input-box {
+  flex: 1;
+  min-width: 10rem;
+  padding: 0.5rem;
+
+  font-size: 1rem;
+
+  border: none;
+  outline: none;
+}
+
+.email-input-container:has(.email-input-box:focus) {
+  border: 1px solid black;
+}
+
+.email-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.email-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+
+  background-color: rgba(115, 83, 234, 0.1);
+  font-size: 0.9rem;
+
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.email-item .profile-picture {
+  width: 2rem;
+  height: 2rem;
+
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.email-item .email-address {
+  flex: 1;
+  word-break: break-all;
+}
+
+.email-item .remove-button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
+
+  transition: color 0.2s;
+}
+
+.email-item .remove-button:hover {
+  color: rgba(255, 0, 0, 0.8);
+}
