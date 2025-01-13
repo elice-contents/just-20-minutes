@@ -1,0 +1,139 @@
+@keyframes fadeIn {
+  from {
+    transform: translateY(-5%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+button {
+  font-family: "Elice DX Neolli", sans-serif;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar {
+  position: relative;
+  width: 18rem;
+}
+
+.calendar__input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+
+  font-size: 1rem;
+  cursor: pointer;
+
+  outline: none;
+}
+
+.calendar__input:hover,
+.calendar__input:focus {
+  border: 1px solid black;
+}
+
+.calendar__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.5rem;
+
+  width: 100%;
+
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+  display: none;
+  z-index: 1000;
+}
+
+.calendar__input:focus ~ .calendar__dropdown {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.calendar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.calendar__title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.calendar__nav {
+  background: none;
+  border: none;
+
+  font-weight: 200;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.calendar__weekdays,
+.calendar__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+
+  padding: 0.5rem;
+}
+
+.calendar__weekdays span {
+  font-size: 0.8rem;
+  text-align: center;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.calendar__days button {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  background: none;
+  border: none;
+  border-radius: 50%;
+
+  font-weight: 200;
+  font-size: 0.9rem;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease-in-out;
+}
+
+.calendar__days button:hover {
+  background: rgba(115, 83, 234, 0.1);
+}
+
+.calendar__days button.active {
+  background: rgba(115, 83, 234, 0.8);
+  color: white;
+  font-weight: 700;
+}
