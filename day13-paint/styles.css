@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+button {
+  font-family: "Elice DX Neolli", sans-serif;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drawing-container {
+  width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.control-group label {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+#drawing-canvas {
+  width: 100%;
+  height: 40rem;
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  background-color: white;
+
+  cursor: crosshair;
+}
+
+.clear-button {
+  padding: 0.5rem 1rem;
+
+  background-color: rgba(115, 83, 234, 1);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.clear-button:hover {
+  background-color: rgba(90, 60, 200, 1);
+}
