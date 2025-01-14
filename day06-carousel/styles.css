@@ -27,7 +27,7 @@ main {
   gap: 2rem;
 }
 
-.carousel__container {
+.carousel-image-slide {
   position: relative;
   width: 1024px;
   height: 500px;
@@ -38,7 +38,7 @@ main {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-.carousel__images {
+.carousel-image-slide__images {
   display: flex;
   align-items: center;
 
@@ -49,7 +49,7 @@ main {
   transition: all 0.5s ease-in-out;
 }
 
-.carousel__buttons {
+.carousel-buttons {
   padding: 0.5rem;
 
   display: flex;
@@ -61,7 +61,7 @@ main {
   border-radius: 2rem;
 }
 
-.carousel__button {
+.carousel-buttons__button {
   width: 2rem;
   height: 2rem;
 
@@ -81,6 +81,6 @@ main {
   cursor: pointer;
 }
 
-.carousel__button:hover {
+.carousel-buttons__button:hover {
   color: rgba(0, 0, 0, 0.8);
 }

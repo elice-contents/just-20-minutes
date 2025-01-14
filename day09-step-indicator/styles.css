@@ -17,11 +17,11 @@ main {
   align-items: center;
 }
 
-.step-indicator-container {
+.step-indicator {
   width: 50rem;
 }
 
-.step-indicator {
+.step-indicator-steps {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +31,7 @@ main {
   list-style: none;
 }
 
-.step-indicator li {
+.step-indicator-steps li {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +40,7 @@ main {
   width: 20%;
 }
 
-.step-indicator li .step-circle {
+.step-indicator-steps li .step-indicator-steps__step-circle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,7 +60,7 @@ main {
   transition: all 0.3s ease-in-out;
 }
 
-.step-indicator li .step-circle::after {
+.step-indicator-steps li .step-indicator-steps__step-circle::after {
   content: "";
   position: absolute;
   right: -50%;
@@ -72,11 +72,11 @@ main {
   z-index: -1;
 }
 
-.step-indicator li:last-child .step-circle::after {
+.step-indicator-steps li:last-child .step-indicator-steps__step-circle::after {
   content: none;
 }
 
-.step-indicator li .step-title {
+.step-indicator-steps li .step-indicator-steps__step-title {
   margin-top: 0.5rem;
 
   font-size: 1rem;
@@ -86,25 +86,25 @@ main {
   transition: color 0.3s ease-in-out;
 }
 
-.step-indicator li.active .step-circle {
+.step-indicator-steps li.active .step-indicator-steps__step-circle {
   border-color: rgba(115, 83, 234, 1);
   color: rgba(115, 83, 234, 1);
 }
 
-.step-indicator li.active .step-title {
+.step-indicator-steps li.active .step-indicator-steps__step-title {
   color: rgba(115, 83, 234, 1);
 }
 
-.step-indicator li.completed .step-circle {
+.step-indicator-steps li.completed .step-indicator-steps__step-circle {
   border-color: rgba(83, 234, 83, 1);
   color: rgba(83, 234, 83, 1);
 }
 
-.step-indicator li.completed .step-circle::after {
+.step-indicator-steps li.completed .step-indicator-steps__step-circle::after {
   background-color: rgba(83, 234, 83, 1);
 }
 
-.step-indicator li.completed .step-title {
+.step-indicator-steps li.completed .step-indicator-steps__step-title {
   color: rgba(83, 234, 83, 1);
 }
 
@@ -113,7 +113,7 @@ main {
   justify-content: space-between;
 }
 
-.step-button {
+.step-indicator-controls__step-button {
   padding: 0.8rem 2rem;
 
   border: none;
@@ -129,17 +129,17 @@ main {
   transition: background-color 0.1s ease-in-out;
 }
 
-.step-button:not(:disabled) {
+.step-indicator-controls__step-button:not(:disabled) {
   background-color: rgba(115, 83, 234, 1);
   color: #fff;
 }
 
-.step-button:not(:disabled):hover {
+.step-indicator-controls__step-button:not(:disabled):hover {
   background-color: #4d00b3;
   color: #fff;
 }
 
-.step-button:disabled {
+.step-indicator-controls__step-button:disabled {
   background-color: #eee;
   color: #3338;
   cursor: not-allowed;

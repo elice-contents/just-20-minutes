@@ -17,7 +17,7 @@ main {
   align-items: center;
 }
 
-.drawing-container {
+.paint {
   width: 60rem;
   display: flex;
   flex-direction: column;
@@ -25,35 +25,24 @@ main {
   gap: 1rem;
 }
 
-.controls {
+.paint-controls {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
 
-.control-group {
+.paint-controls__control-group {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.control-group label {
+.paint-controls__control-group label {
   font-size: 0.9rem;
   margin-bottom: 0.3rem;
 }
 
-#drawing-canvas {
-  width: 100%;
-  height: 40rem;
-
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.5rem;
-  background-color: white;
-
-  cursor: crosshair;
-}
-
-.clear-button {
+.paint-controls__clear-button {
   padding: 0.5rem 1rem;
 
   background-color: rgba(115, 83, 234, 1);
@@ -67,6 +56,17 @@ main {
   transition: background-color 0.2s;
 }
 
-.clear-button:hover {
+.paint-controls__clear-button:hover {
   background-color: rgba(90, 60, 200, 1);
+}
+
+.paint__canvas {
+  width: 100%;
+  height: 40rem;
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  background-color: white;
+
+  cursor: crosshair;
 }

@@ -1,18 +1,18 @@
-const progressBarList = document.getElementById("progress-bar-list");
-const progressBar = document.getElementById("progress-bar");
+const progressList = document.getElementById("progress-list");
+const progress = document.getElementById("progress");
 const h1 = document.querySelector("h1");
 const h2s = document.querySelectorAll("h2");
 
 const li = document.createElement("li");
 li.textContent = h1.textContent;
 li.classList.add("progress-bar__item");
-progressBarList.appendChild(li);
+progressList.appendChild(li);
 
 h2s.forEach((h2) => {
   const li = document.createElement("li");
   li.textContent = h2.textContent;
   li.classList.add("progress-bar__item");
-  progressBarList.appendChild(li);
+  progressList.appendChild(li);
 });
 
 window.addEventListener("scroll", () => {
@@ -20,7 +20,7 @@ window.addEventListener("scroll", () => {
   const { offsetHeight } = document.body;
   const max = offsetHeight - innerHeight;
   const percentage = (scrollY / max) * 100;
-  progressBar.style.width = `${percentage}%`;
+  progress.style.width = `${percentage}%`;
 
   let currentH2;
   let index = 0;
@@ -31,5 +31,5 @@ window.addEventListener("scroll", () => {
     index++;
   }
 
-  progressBarList.style.top = `-${4 * index}rem`;
+  progressList.style.top = `-${4 * index}rem`;
 });

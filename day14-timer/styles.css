@@ -18,7 +18,7 @@ main {
   align-items: center;
 }
 
-.timer-container {
+.timer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,17 +31,17 @@ main {
   height: 250px;
 }
 
-.timer-circle {
+.timer-display__circle {
   transform: rotate(-90deg);
 }
 
-.circle-bg {
+.timer-display__circle-bg {
   fill: none;
   stroke: rgba(0, 0, 0, 0.1);
   stroke-width: 5;
 }
 
-.circle-progress {
+.timer-display__circle-progress {
   fill: none;
   stroke: rgba(115, 83, 234, 1);
   stroke-width: 5;
@@ -50,11 +50,11 @@ main {
   transition: stroke-dashoffset 0.5s ease-in-out, stroke 0.2s ease-in-out;
 }
 
-.circle-progress.paused {
+.timer-display__circle-progress.timer-display__circle-progress--paused {
   stroke: rgb(234, 83, 106);
 }
 
-.timer-time {
+.timer-display__time {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -72,7 +72,8 @@ main {
   gap: 1rem;
 }
 
-.control-button {
+.timer-controls__control-button,
+.timer-settings__control-button {
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.5rem;
@@ -85,11 +86,12 @@ main {
   transition: background-color 0.2s;
 }
 
-.control-button:hover {
+.timer-controls__control-button:hover,
+.timer-settings__control-button:hover {
   background-color: rgba(90, 60, 200, 1);
 }
 
-input[type="number"] {
+.timer-settings__minute-input {
   width: 4rem;
   padding: 0.5rem;
   text-align: center;

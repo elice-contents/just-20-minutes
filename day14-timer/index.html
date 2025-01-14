@@ -12,23 +12,48 @@
   </head>
   <body>
     <main>
-      <div class="timer-container">
+      <div class="timer">
         <div class="timer-display">
-          <svg class="timer-circle" width="250" height="250">
-            <circle cx="125" cy="125" r="100" class="circle-bg" />
-            <circle cx="125" cy="125" r="100" class="circle-progress" />
+          <svg class="timer-display__circle" width="250" height="250">
+            <circle
+              cx="125"
+              cy="125"
+              r="100"
+              class="timer-display__circle-bg"
+            />
+            <circle
+              cx="125"
+              cy="125"
+              r="100"
+              class="timer-display__circle-progress"
+            />
           </svg>
-          <span id="timer-time" class="timer-time">00:00:00</span>
+          <span id="timer-time" class="timer-display__time">00:00:00</span>
         </div>
         <div class="timer-controls">
-          <button id="start-button" class="control-button">시작</button>
-          <button id="pause-button" class="control-button">일시정지</button>
-          <button id="reset-button" class="control-button">초기화</button>
+          <button id="start-button" class="timer-controls__control-button">
+            시작
+          </button>
+          <button id="pause-button" class="timer-controls__control-button">
+            일시정지
+          </button>
+          <button id="reset-button" class="timer-controls__control-button">
+            초기화
+          </button>
         </div>
         <div class="timer-settings">
           <label for="set-minutes">설정 (분):</label>
-          <input id="set-minutes" type="number" min="0" max="60" value="1" />
-          <button id="set-timer-button" class="control-button">설정</button>
+          <input
+            id="set-minutes"
+            class="timer-settings__minute-input"
+            type="number"
+            min="0"
+            max="60"
+            value="1"
+          />
+          <button id="set-timer-button" class="timer-settings__control-button">
+            설정
+          </button>
         </div>
       </div>
     </main>

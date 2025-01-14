@@ -51,7 +51,7 @@ main {
   border: 1px solid black;
 }
 
-.calendar__dropdown {
+.calendar-dropdown {
   position: absolute;
   top: 100%;
   left: 0;
@@ -69,12 +69,12 @@ main {
   z-index: 1000;
 }
 
-.calendar__input:focus ~ .calendar__dropdown {
+.calendar__input:focus ~ .calendar-dropdown {
   display: block;
   animation: fadeIn 0.3s ease-in-out;
 }
 
-.calendar__header {
+.calendar-dropdown__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,12 +84,12 @@ main {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.calendar__title {
+.calendar-dropdown__title {
   font-size: 1rem;
   font-weight: 700;
 }
 
-.calendar__nav {
+.calendar-dropdown__nav {
   background: none;
   border: none;
 
@@ -98,22 +98,22 @@ main {
   cursor: pointer;
 }
 
-.calendar__weekdays,
-.calendar__days {
+.calendar-dropdown__weekdays,
+.calendar-dropdown__days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
 
   padding: 0.5rem;
 }
 
-.calendar__weekdays span {
+.calendar-dropdown__weekdays span {
   font-size: 0.8rem;
   text-align: center;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.5);
 }
 
-.calendar__days button {
+.calendar-dropdown__days button {
   width: 100%;
   aspect-ratio: 1 / 1;
 
@@ -128,11 +128,11 @@ main {
   transition: background-color 0.3s ease-in-out;
 }
 
-.calendar__days button:hover {
+.calendar-dropdown__days button:hover {
   background: rgba(115, 83, 234, 0.1);
 }
 
-.calendar__days button.active {
+.calendar-dropdown__days button.calendar-dropdown__days--active {
   background: rgba(115, 83, 234, 0.8);
   color: white;
   font-weight: 700;

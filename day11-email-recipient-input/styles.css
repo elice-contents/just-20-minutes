@@ -27,7 +27,7 @@ main {
   align-items: center;
 }
 
-.email-input-container {
+.email-input {
   width: 40rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
@@ -38,7 +38,7 @@ main {
   gap: 0.5rem;
 }
 
-.email-input-box {
+.email-input__input-box {
   flex: 1;
   min-width: 10rem;
   padding: 0.5rem;
@@ -53,13 +53,13 @@ main {
   border: 1px solid black;
 }
 
-.email-list {
+.email-input__email-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.email-item {
+.email-input__email-item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -74,7 +74,7 @@ main {
   animation: fadeIn 0.2s ease-in-out;
 }
 
-.email-item .profile-picture {
+.email-input__email-item .profile-picture {
   width: 2rem;
   height: 2rem;
 
@@ -82,12 +82,12 @@ main {
   background-color: #ccc;
 }
 
-.email-item .email-address {
+.email-input__email-item .email-address {
   flex: 1;
   word-break: break-all;
 }
 
-.email-item .remove-button {
+.email-input__email-item .remove-button {
   background: none;
   border: none;
   font-size: 1.2rem;
@@ -97,6 +97,6 @@ main {
   transition: color 0.2s;
 }
 
-.email-item .remove-button:hover {
+.email-input__email-item .remove-button:hover {
   color: rgba(255, 0, 0, 0.8);
 }

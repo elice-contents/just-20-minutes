@@ -1,5 +1,7 @@
 const timerTime = document.getElementById("timer-time");
-const circleProgress = document.querySelector(".circle-progress");
+const circleProgress = document.querySelector(
+  ".timer-display__circle-progress"
+);
 const startButton = document.getElementById("start-button");
 const pauseButton = document.getElementById("pause-button");
 const resetButton = document.getElementById("reset-button");
@@ -26,7 +28,7 @@ const updateTimerDisplay = () => {
 const startTimer = () => {
   if (timeRemaining <= 0 || timerInterval) return;
 
-  circleProgress.classList.remove("paused");
+  circleProgress.classList.remove("timer-display__circle-progress--paused");
   timerInterval = setInterval(() => {
     timeRemaining--;
     updateTimerDisplay();
@@ -41,7 +43,7 @@ const startTimer = () => {
 
 const pauseTimer = () => {
   if (timerInterval) {
-    circleProgress.classList.add("paused");
+    circleProgress.classList.add("timer-display__circle-progress--paused");
     clearInterval(timerInterval);
     timerInterval = null;
   }
@@ -49,7 +51,7 @@ const pauseTimer = () => {
 
 const resetTimer = () => {
   pauseTimer();
-  circleProgress.classList.remove("paused");
+  circleProgress.classList.remove("timer-display__circle-progress--paused");
   timeRemaining = totalDuration;
   updateTimerDisplay();
 };

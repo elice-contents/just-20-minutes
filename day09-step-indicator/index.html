@@ -13,11 +13,19 @@
   </head>
   <body>
     <main>
-      <div class="step-indicator-container">
-        <ul id="step-indicator" class="step-indicator"></ul>
+      <div class="step-indicator">
+        <ul id="step-indicator-steps" class="step-indicator-steps"></ul>
         <div class="step-indicator-controls">
-          <button id="prev-step" class="step-button" disabled>이전</button>
-          <button id="next-step" class="step-button">다음</button>
+          <button
+            id="prev-step"
+            class="step-indicator-controls__step-button"
+            disabled
+          >
+            이전
+          </button>
+          <button id="next-step" class="step-indicator-controls__step-button">
+            다음
+          </button>
         </div>
       </div>
     </main>

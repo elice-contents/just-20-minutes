@@ -2,7 +2,7 @@ const starRating = document.getElementById("star-rating");
 const ratingValue = document.getElementById("rating-value");
 const keywords = document.getElementById("keywords");
 const reviewForm = document.getElementById("review-form");
-const stars = starRating.querySelectorAll(".star");
+const stars = starRating.querySelectorAll(".review-stars__star");
 
 let currentRating = 0;
 
@@ -27,15 +27,15 @@ starRating.addEventListener("mousemove", (event) => {
 
 let selectedKeywords = [];
 keywords.addEventListener("click", (event) => {
-  if (!event.target.classList.contains("keyword")) return;
+  if (!event.target.classList.contains("review-keywords__keyword")) return;
 
   const keyword = event.target.textContent;
   if (selectedKeywords.includes(keyword)) {
     selectedKeywords = selectedKeywords.filter((k) => k !== keyword);
-    event.target.classList.remove("active");
+    event.target.classList.remove("review-keywords__keyword--active");
   } else if (selectedKeywords.length < 3) {
     selectedKeywords.push(keyword);
-    event.target.classList.add("active");
+    event.target.classList.add("review-keywords__keyword--active");
   } else {
     alert("최대 3개의 키워드를 선택할 수 있습니다.");
   }

@@ -8,12 +8,12 @@ const steps = [
 
 let currentStep = 0;
 
-const stepIndicator = document.getElementById("step-indicator");
+const stepIndicatorSteps = document.getElementById("step-indicator-steps");
 const prevButton = document.getElementById("prev-step");
 const nextButton = document.getElementById("next-step");
 
 const renderSteps = () => {
-  stepIndicator.innerHTML = steps.reduce(
+  stepIndicatorSteps.innerHTML = steps.reduce(
     (acc, step, index) =>
       acc +
       `
@@ -24,8 +24,8 @@ const renderSteps = () => {
             ? "active"
             : ""
         }">
-          <div class="step-circle">${index + 1}</div>
-          <div class="step-title">${step.title}</div>
+          <div class="step-indicator-steps__step-circle">${index + 1}</div>
+          <div class="step-indicator-steps__step-title">${step.title}</div>
         </li>`,
     ""
   );

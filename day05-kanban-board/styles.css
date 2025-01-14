@@ -22,12 +22,6 @@ main {
   position: relative;
 }
 
-h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
-}
-
 .kanban {
   width: 80rem;
   padding: 2rem;

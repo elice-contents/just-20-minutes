@@ -1,5 +1,5 @@
 const dataList = document.getElementById("data-list");
-const pagination = document.getElementById("pagination");
+const paginationButtons = document.getElementById("pagination-buttons");
 
 const dummyData = Array.from({ length: 50 }, (_, i) => ({
   id: i + 1,
@@ -39,29 +39,29 @@ const renderPagination = (totalItems, page, size) => {
   const startPage = (currentRange - 1) * maxVisiblePages + 1;
   const endPage = Math.min(startPage + maxVisiblePages - 1, totalPages);
 
-  pagination.innerHTML = "";
+  paginationButtons.innerHTML = "";
 
   if (currentRange > 1) {
-    pagination.innerHTML += `<button class="pagination__control" data-page="1"><<</button>`;
-    pagination.innerHTML += `<button class="pagination__control" data-page="${
+    paginationButtons.innerHTML += `<button class="pagination-buttons__button" data-page="1"><<</button>`;
+    paginationButtons.innerHTML += `<button class="pagination-buttons__button" data-page="${
       startPage - 1
     }"><</button>`;
   }
 
   for (let i = startPage; i <= endPage; i++) {
-    pagination.innerHTML += `<button class="pagination__button ${
-      i === page ? "active" : ""
+    paginationButtons.innerHTML += `<button class="pagination-buttons__button ${
+      i === page ? "pagination-buttons__button--active" : ""
     }" data-page="${i}">${i}</button>`;
   }
 
   if (currentRange < Math.ceil(totalPages / maxVisiblePages)) {
-    pagination.innerHTML += `<button class="pagination__control" data-page="${
+    paginationButtons.innerHTML += `<button class="pagination-buttons__button" data-page="${
       endPage + 1
     }">></button>`;
-    pagination.innerHTML += `<button class="pagination__control" data-page="${totalPages}">>></button>`;
+    paginationButtons.innerHTML += `<button class="pagination-buttons__button" data-page="${totalPages}">>></button>`;
   }
 
-  pagination.querySelectorAll("button").forEach((button) => {
+  paginationButtons.querySelectorAll("button").forEach((button) => {
     button.addEventListener("click", () => {
       const newPage = parseInt(button.dataset.page, 10);
       const newUrl = `${window.location.pathname}?page=${newPage}&size=${size}`;

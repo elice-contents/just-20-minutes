@@ -29,9 +29,8 @@ const renderCalendar = () => {
       selectedDate.getFullYear() === year &&
       selectedDate.getMonth() === month &&
       selectedDate.getDate() === day
-    ) {
-      dayButton.classList.add("active");
-    }
+    )
+      dayButton.classList.add("calendar-dropdown__days--active");
 
     dayButton.addEventListener("click", () => {
       selectedDate = new Date(year, month, day);
@@ -41,10 +40,13 @@ const renderCalendar = () => {
       )}-${String(day).padStart(2, "0")}`;
       dateInput.value = formattedDate;
 
-      const prevActive = calendarDays.querySelector(".active");
-      if (prevActive) prevActive.classList.remove("active");
+      const prevActive = calendarDays.querySelector(
+        ".calendar-dropdown__days--active"
+      );
+      if (prevActive)
+        prevActive.classList.remove("calendar-dropdown__days--active");
 
-      dayButton.classList.add("active");
+      dayButton.classList.add("calendar-dropdown__days--active");
     });
 
     calendarDays.appendChild(dayButton);

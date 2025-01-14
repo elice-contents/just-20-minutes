@@ -13,7 +13,7 @@ const addEmail = (email) => {
   }
 
   const emailItem = document.createElement("div");
-  emailItem.className = "email-item";
+  emailItem.className = "email-input__email-item";
 
   emailItem.innerHTML = `
     <div class="profile-picture"></div>
@@ -43,7 +43,7 @@ emailInputBox.addEventListener("keydown", (event) => {
   if (event.key === "Backspace") {
     if (email.length === 0) {
       event.preventDefault();
-      const emailItems = emailList.querySelectorAll(".email-item");
+      const emailItems = emailList.querySelectorAll(".email-input__email-item");
       const lastEmail = Array.from(emailItems)[emailItems.length - 1];
       if (lastEmail) {
         lastEmail.remove();
