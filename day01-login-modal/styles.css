@@ -145,7 +145,8 @@ main {
   border: 1px solid rgba(115, 83, 234, 0.7);
 }
 
-.login-form__item > input:focus ~ label {
+.login-form__item > input:focus ~ label,
+.login-form__item > input:not(:placeholder-shown) ~ label {
   top: 0;
   font-size: 0.8rem;
   background-color: white;
